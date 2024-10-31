@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { cubicBezier, motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
-import useSwr from "swr";
 import ReactGa from "react-ga";
 
 interface indexProps {}
