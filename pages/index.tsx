@@ -52,8 +52,6 @@ const transition: { duration: number; ease: any } = {
   // ease: [0.6, 0.01, -0.05, 0.9],
 };
 
-const fetcher = (url: any) => fetch(url).then((res) => res.json());
-
 const index: React.FC<indexProps> = () => {
   const [speakerState, setSpeakerState] = useState("muted");
   const [isToggleOpen, setIsToggleOpen] = useState<boolean>(false);
