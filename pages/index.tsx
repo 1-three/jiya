@@ -7,6 +7,40 @@ import ReactGa from "react-ga";
 
 interface indexProps {}
 
+const projects = [
+  {
+    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
+    version: "Version 1",
+    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-1",
+    images: [
+      { src: "webp/image1-1.webp", alt: "Image 1 for project 1" },
+      { src: "webp/image1-2.webp", alt: "Image 2 for project 1" },
+    ],
+  },
+  {
+    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
+    version: "Version 2",
+    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-2",
+    dribbleLink: "https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio-2",
+    images: [
+      { src: "webp/image2-1.webp", alt: "Image 1 for project 2" },
+      { src: "webp/image2-2.webp", alt: "Image 2 for project 2" },
+    ],
+  },
+  // Add more project objects for each project
+  // ...
+  {
+    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
+    version: "Version 20",
+    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-20",
+    dribbleLink: "https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio-20",
+    images: [
+      { src: "webp/image20-1.webp", alt: "Image 1 for project 20" },
+      { src: "webp/image20-2.webp", alt: "Image 2 for project 20" },
+    ],
+  },
+];
+
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
 
@@ -308,402 +342,56 @@ const index: React.FC<indexProps> = () => {
               scroll
             </p>
 
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">
-                  FROM: diya, TO: jiya
-                </h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-                <img src="webp/alexxandria-1.webp" alt="alexxandria model" />
-                <img src="webp/alexxandria-2.webp" alt="alexxandria logo" />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="alexxandria-anim"
-                  className="heading-2"
-                >
-                  FROM:
-                  <br /> Diya
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  className="project-card__link"
-                >
-                  diya's wish
-                </a>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <div className="project-card__left">
-                <h4 className="heading-4">HTML, SCSS, JAVASCRIPT, GSAP</h4>
-              </div>
-              <div
-                className="project-card__middle"
-                data-displacement="webp/myDistorsionImage.webp"
-              >
-            <img src="svg\J7_ggEP5R_-NJZNp0bhl9g.png" alt="HAPPY BIRTHDAY" style={{ width: '50px', height: 'auto' }} />
-            <img src="svg\J7_ggEP5R_-NJZNp0bhl9g.png" alt="HAPPY BIRTHDAY" style={{ width: '50px', height: 'auto' }} />
-              </div>
-              <div className="project-card__right">
-                <h2
-                  data-scroll
-                  data-scroll-offset="35%"
-                  data-scroll-repeat={true}
-                  data-scroll-class="adeola-anim"
-                  className="heading-2"
-                >
-                  AdeolaAdeoti
-                  <br /> version 1
-                </h2>
-                <a
-                  rel="noopener"
-                  target="_blank"
-                  href="https://github.com/adeolaadeoti/adeolaadeoti-portfolio"
-                  className="project-card__link"
-                >
-                  VIEW SOURCE CODE
-                </a>
-                <div className="project-card__socials">
-                  <a
-                    rel="noopener"
-                    target="_blank"
-                    href="https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio"
-                  >
-                    <img src="svg/dribble.svg" alt="dribble icon" />
-                  </a>
-                  <a
-                    rel="noopener"
-                    target="_blank"
-                    href="https://github.com/adeolaadeoti/adeolaadeoti-portfolio"
-                  >
-                    <img src="svg/github.svg" alt="github icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
+            {projects.map((project, index) => (
+    <div className="project-card" key={index}>
+      <div className="project-card__left">
+        <h4 className="heading-4">{project.techStack}</h4>
+      </div>
+      <div className="project-card__middle" data-displacement={`webp/myDistorsionImage-${index + 1}.webp`}>
+        {project.images.map((image, imgIndex) => (
+          <img key={imgIndex} src={image.src} alt={image.alt} />
+        ))}
+      </div>
+      <div className="project-card__right">
+        <h2 className="heading-2">
+          AdeolaAdeoti
+          <br /> {project.version}
+        </h2>
+        <a
+          rel="noopener"
+          target="_blank"
+          href={project.sourceCode}
+          className="project-card__link"
+        >
+          VIEW SOURCE CODE
+        </a>
+        <div className="project-card__socials">
+          <a
+            rel="noopener"
+            target="_blank"
+            href={project.dribbleLink}
+          >
+            <img src="svg/dribble.svg" alt="Dribbble icon" />
+          </a>
+          <a
+            rel="noopener"
+            target="_blank"
+            href={project.sourceCode}
+          >
+            <img src="svg/github.svg" alt="GitHub icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+</section>
           <section className="section-contact">
             <h1 className="heading-1">
-              <span>Sold Yet? </span> <small>🤙</small>
+              <span>LOVE YOU </span>
             </h1>
-            <h2 className="section-contact__h2">
-              Thanks for stopping by, I’m currently looking to join a new team
-              of creative designers and developers. If you think we might be a
-              good fit for one another, send me an
-              <a
-                href="mailto:adeolaonigegeara@gmail.com"
-                rel="noopener"
-                target="_blank"
-              >
-                &nbsp; email 📧
-              </a>
-              .
-            </h2>
-          </section>
-          <section className="section-socials">
-            <h1 className="heading-1">
-              <span>Dont be a stranger!</span> <small>👋</small>
-            </h1>
-            <p className="paragraph">Connect with me online</p>
-            <div className="section-socials--links">
-              <a
-                href="https://github.com/adeolaadeoti"
-                rel="noopener"
-                target="_blank"
-              >
-                👾 GitHub
-              </a>
-              <a
-                href="https://twitter.com/adeolajs"
-                rel="noopener"
-                target="_blank"
-              >
-                🐦 Twitter
-              </a>
-              <a
-                href="https://www.linkedin.com/in/adeoladev"
-                rel="noopener"
-                target="_blank"
-              >
-                💼 LinkedIn
-              </a>
-              <a
-                href="https://www.instagram.com/adeolaadeoti_"
-                rel="noopener"
-                target="_blank"
-              >
-                📸 Instagram
-              </a>
-            </div>
           </section>
         </main>
         <footer className="footer">
-          <img
-            src="svg/adeola-logo-footer.svg"
-            alt="design and devloped by adeola"
-          />
-          <div className="footer__socials">
-            <a
-              href="https://dribbble.com/shots/16100745-Adeola-Adeoti-Personal-Website"
-              target="_blank"
-              rel="noopener"
-            >
-              <img src="svg/dribble.svg" alt="dribble logo" />
-            </a>
-            <a
-              href="https://github.com/adeolaadeoti/adeolaadeoti-v2"
-              target="_blank"
-              rel="noopener"
-            >
-              <img src="svg/github.svg" alt="github logo" />
-            </a>
-          </div>
         </footer>
       </div>
     </>
