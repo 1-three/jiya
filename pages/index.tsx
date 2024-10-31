@@ -177,7 +177,7 @@ const index: React.FC<indexProps> = () => {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <audio loop id="audioPlayer" autoPlay style={{ display: "none" }}>
-          <source src="sound/preloader1.mp3" type="audio/mp3" />
+        <source src="/sound/preloader1.mp3" type="audio/mp3" />
         </audio>
         <motion.div
           data-scroll
