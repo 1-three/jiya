@@ -251,6 +251,7 @@ const index: React.FC<indexProps> = () => {
           <section id="sectionProjects" className="section-projects">
           <h2 className="section-contact__h2">
               in case i cannot figure out how to make it work, i need you to know that the background music is supposed to be vienna
+            <br /> ok toggle the on/off button on the left and it should work. cheers. 
             </h2>
 
 
@@ -881,7 +882,7 @@ const index: React.FC<indexProps> = () => {
           </section>
           <section className="section-contact">
             <h1 className="heading-1">
-              <span>click on the menu!!!! </span>
+              <span>THE END !!!!!!! </span>
             </h1>
           </section>
         </main>
