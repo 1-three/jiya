@@ -9,9 +9,6 @@ interface indexProps {}
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
 
-const hoverEffect =
-  typeof window !== `undefined` ? require("hover-effect").default : null;
-
 const transition: { duration: number; ease: any } = {
   duration: 1.4,
   ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
@@ -47,42 +44,6 @@ const index: React.FC<indexProps> = () => {
       lscroll.update();
     });
 
-    // image hover effect
-    Array.from(document.querySelectorAll(".project-card__middle")).forEach(
-      (el: any) => {
-        const imgs: any = Array.from(el.querySelectorAll("img"));
-        new hoverEffect({
-          parent: el,
-          intensity: 0.2,
-          speedIn: el.dataset.speedin || undefined,
-          speedOut: el.dataset.speedout || undefined,
-          easing: el.dataset.easing || undefined,
-          hover: el.dataset.hover || undefined,
-          image1: imgs[0].getAttribute("src"),
-          image2: imgs[1].getAttribute("src"),
-          displacementImage: el.dataset.displacement,
-        });
-      }
-    );
-
-    // header cursor
-    const cursor = document.querySelector(".cursor");
-    window.onmousemove = (e: any) => {
-      cursor!.setAttribute("style", `top: ${e.pageY}px; left: ${e.pageX}px;`);
-    };
-
-    console.clear();
-    console.log.apply(console, [
-      "%c Designed and Developed by Adeola Adeoti %c %c🚀 %c\n",
-      "color: #fff; background: #8000ff; padding:5px 0;",
-      "color: #fff; background: #242424; padding:5px 0 5px 5px;",
-      "background: #242424; padding:5px 0",
-      "background: #242424; padding:5px 5px 5px 0",
-    ]);
-    console.log.apply(console, [
-      "%c Thanks for stopping by, I’m currently looking to a new team of creative designers and developers.\n",
-      "color: #fff; background: #8000ff; padding:5px 0;",
-    ]);
   }, []);
 
   const handleSpeaker = () => {
