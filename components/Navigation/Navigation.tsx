@@ -2,7 +2,6 @@ import * as React from "react";
 import { cubicBezier, motion } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { MobileNavigation } from "./MobileNavigation";
-import Link from "next/link";
 
 const variants = {
   open: {
@@ -38,22 +37,6 @@ export const Navigation = ({ isOpen, toggleOpen }: any) => {
         data-scroll-target="#menu-target"
         className="menu-top"
       >
-<Link href="/" className="brand-logo">
-  <img
-    className="brand-logo__icon"
-    src="svg\J7_ggEP5R_-NJZNp0bhl9g.png"
-    alt="adeola logo icon"
-    style={{ width: '40px', height: 'auto' }} // Adjust width as needed
-  />
-  <span className="brand-logo__text-wrapper">
-    <img
-      className="brand-logo__text"
-      src="svg/adeola-logo-right.svg"
-      alt="adeola logo text"
-      style={{ width: '100px', height: 'auto' }} // Adjust width as needed
-    />
-  </span>
-</Link>
         <MenuToggle toggle={toggleOpen} toggleState={isOpen} />
       </div>
     </motion.div>
