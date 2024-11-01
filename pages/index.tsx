@@ -109,8 +109,7 @@ const index: React.FC<indexProps> = () => {
     <>
       <div id="menu-target" data-scroll-container ref={refScroll}>
         <Head>
-          <link rel="icon" href="svg/favicon.svg" />
-          <link href="https://adeolaadeoti.xyz/" rel="canonical" />
+          <link rel="icon" href="svg/cursor.svg" />
           <meta name="theme-color" content="#10101A" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
