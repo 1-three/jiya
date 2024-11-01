@@ -2,43 +2,10 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { cubicBezier, motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
+import useSwr from "swr";
 import ReactGa from "react-ga";
 
 interface indexProps {}
-
-const projects = [
-  {
-    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
-    version: "Version 1",
-    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-1",
-    images: [
-      { src: "webp/image1-1.webp", alt: "Image 1 for project 1" },
-      { src: "webp/image1-2.webp", alt: "Image 2 for project 1" },
-    ],
-  },
-  {
-    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
-    version: "Version 2",
-    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-2",
-    dribbleLink: "https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio-2",
-    images: [
-      { src: "webp/image2-1.webp", alt: "Image 1 for project 2" },
-      { src: "webp/image2-2.webp", alt: "Image 2 for project 2" },
-    ],
-  },
-  // Add more project objects for each project
-  // ...
-  {
-    techStack: "HTML, SCSS, JAVASCRIPT, GSAP",
-    version: "Version 20",
-    sourceCode: "https://github.com/adeolaadeoti/adeolaadeoti-portfolio-20",
-    dribbleLink: "https://dribbble.com/shots/12338926-Adeola-Adeoti-Portfolio-20",
-    images: [
-      { src: "webp/image20-1.webp", alt: "Image 1 for project 20" },
-      { src: "webp/image20-2.webp", alt: "Image 2 for project 20" },
-    ],
-  },
-];
 
 const locomotiveScroll =
   typeof window !== `undefined` ? require("locomotive-scroll").default : null;
@@ -51,6 +18,8 @@ const transition: { duration: number; ease: any } = {
   ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
   // ease: [0.6, 0.01, -0.05, 0.9],
 };
+
+const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
 const index: React.FC<indexProps> = () => {
   const [speakerState, setSpeakerState] = useState("muted");
@@ -149,35 +118,10 @@ const index: React.FC<indexProps> = () => {
             name="apple-mobile-web-app-status-bar-style"
             content="#10101A"
           />
-          <title>Adeola Adeoti 🚀 &mdash; Frontend Devloper</title>
-          <meta
-            name="description"
-            content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Adeola Adeoti 🚀 &mdash; Frontend Devloper"
-          />
-          <meta property="og:url" content="https://adeolaadeoti.xyz/" />
-          <meta property="og:image" content="webp/preview-image.png" />
-          <meta
-            property="og:description"
-            content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
-          />
-          <meta
-            name="twitter:title"
-            content="Adeola Adeoti 🚀 &mdash; Frontend Devloper"
-          />
-          <meta
-            name="twitter:description"
-            content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
-          />
-          <meta name="twitter:image" content="webp/preview-image.png" />
-          <meta name="twitter:card" content="summary_large_image" />
+          <title>HAPPY birthday jiyu</title>
         </Head>
         <audio loop id="audioPlayer" autoPlay style={{ display: "none" }}>
-        <source src="/sound/preloader1.mp3" type="audio/mp3" />
+          <source src="sound/preloader1.mp3" type="audio/mp3" />
         </audio>
         <motion.div
           data-scroll
@@ -205,7 +149,6 @@ const index: React.FC<indexProps> = () => {
               <p className="preloader__text">BARBIE</p>
               <p className="preloader__text">TOTA SINGH</p>
               <p className="preloader__text">JOHNNY</p>
-              <p className="preloader__text">FRAMER MOTION</p>
             </motion.div>
           </div>
         </motion.div>
@@ -218,20 +161,30 @@ const index: React.FC<indexProps> = () => {
           <header className="header">
             <div className="header__hero">
               <div className="header__hero--heading">
-                <span>turning ideas into </span> <br />
-                <span>real life </span>
-                <span className="header__hero--heading-gradient">
-                  products{" "}
+                <span>you </span>
+                  <span className="header__hero--heading-gradient">
+                    <a href="https://www.instagram.com/p/C-Hu-mXvTP4/?img_index=7">               
+                         did{" "}
+                    </a>
                 </span>
-                <br />
-                <span>is my calling.</span>
+
+                <span>turn </span>
+                <span className="header__hero--heading-gradient">
+                  twenty{" "}
+                </span>
+                <span>regardless.                  <br />
+                and it is going to look so </span>
+                <span className="header__hero--heading-gradient">
+                  happy{" "}
+                </span>
+                <span>on you</span>
+
               </div>
               <a
                 data-scroll-to
                 className="header__hero--cta"
                 href="#sectionProjects"
               >
-                VIEW PROJECTS
               </a>
             </div>
           </header>
@@ -295,96 +248,643 @@ const index: React.FC<indexProps> = () => {
                 </div>
               </div>
             </div>
-            <div className="header__footer--right">
-              <a
-                href="https://github.com/adeolaadeoti"
-                rel="noopener"
-                target="_blank"
-              >
-                👾 GH
-              </a>
-              <a
-                href="https://twitter.com/adeolajs"
-                rel="noopener"
-                target="_blank"
-              >
-                🐦 TW
-              </a>
-              <a
-                href="https://www.linkedin.com/in/adeoladev"
-                rel="noopener"
-                target="_blank"
-              >
-                💼 LD
-              </a>
-              <a
-                href="https://www.instagram.com/adeolaadeoti_"
-                rel="noopener"
-                target="_blank"
-              >
-                {" "}
-                📸 IN
-              </a>
-            </div>
           </div>
         </div>
         <main className="container">
-          <p className="about-text">
-            happy jiya day, jiyu!!!!!!           </p>
           <section id="sectionProjects" className="section-projects">
-            <h1 className="heading-1">
-              <span>happy 20th! </span> <small>💼</small>
-            </h1>
-            <p className="paragraph">
-              scroll
-            </p>
+          <h2 className="section-contact__h2">
+              in case i cannot figure out how to make it work, i need you to know that the background music is supposed to be vienna
+            </h2>
 
-            {projects.map((project, index) => (
-    <div className="project-card" key={index}>
-      <div className="project-card__left">
-        <h4 className="heading-4">{project.techStack}</h4>
-      </div>
-      <div className="project-card__middle" data-displacement={`webp/myDistorsionImage-${index + 1}.webp`}>
-        {project.images.map((image, imgIndex) => (
-          <img key={imgIndex} src={image.src} alt={image.alt} />
-        ))}
-      </div>
-      <div className="project-card__right">
-        <h2 className="heading-2">
-          AdeolaAdeoti
-          <br /> {project.version}
-        </h2>
-        <a
-          rel="noopener"
-          target="_blank"
-          href={project.sourceCode}
-          className="project-card__link"
-        >
-          VIEW SOURCE CODE
-        </a>
-        <div className="project-card__socials">
-          <a
-            rel="noopener"
-            target="_blank"
-            href={project.dribbleLink}
-          >
-            <img src="svg/dribble.svg" alt="Dribbble icon" />
-          </a>
-          <a
-            rel="noopener"
-            target="_blank"
-            href={project.sourceCode}
-          >
-            <img src="svg/github.svg" alt="GitHub icon" />
-          </a>
-        </div>
-      </div>
-    </div>
-  ))}
-</section>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024
+                </h4>
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> diya
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  diya's wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="safarika-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> vanshika
+
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                  <br></br>
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> mummy
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> papa
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic1.jpeg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic2.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="safarika-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic3.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic4.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> wish
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic5.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic6.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="safarika-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic7.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic8.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic9.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> NAME
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  WISH
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic10.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="safarika-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic11.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic12.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic13.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="alexxandria-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic14.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="safarika-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">
+                7TH NOVEMBER, 2024                </h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic15.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="heatrow-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-card__left">
+                <h4 className="heading-4">7TH NOVEMBER, 2024</h4>
+              </div>
+              <div
+                className="project-card__middle"
+                data-displacement="webp/myDistorsionImage.webp"
+              >
+                <img src="svg/pic16.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
+              </div>
+              <div className="project-card__right">
+                <h2
+                  data-scroll
+                  data-scroll-offset="35%"
+                  data-scroll-repeat={true}
+                  data-scroll-class="adeola-anim"
+                  className="heading-2"
+                >
+                  FROM:
+                  <br /> name
+                </h2>
+                <a
+                  rel="noopener"
+                  target="_blank"
+                  className="project-card__link"
+                >
+                  wish
+                </a>
+              </div>
+            </div>
+
+          </section>
           <section className="section-contact">
             <h1 className="heading-1">
-              <span>LOVE YOU </span>
+              <span>click on the menu!!!! </span>
             </h1>
           </section>
         </main>

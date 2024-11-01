@@ -148,12 +148,12 @@
 // section
 
 .section-projects {
-  grid-column: 2/14;
+  grid-column: 1/20;
   margin-top: 20rem;
   padding: 0 6rem;
 
   @media only screen and (max-width: 57em) {
-    grid-column: 1/15;
+    grid-column: 1/20;
   }
   @media only screen and (max-width: 45em) {
     padding: 0 4rem;

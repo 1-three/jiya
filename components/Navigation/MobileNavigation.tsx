@@ -47,98 +47,27 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
         }
         className="navigation-top"
       >
-        <div className="navigation-top__left">
-          <h4 className="navigation-h4">DONT BE A STRANGER</h4>
-          <div className="navigation-top__left--links">
-            <a
-              href="https://github.com/adeolaadeoti"
-              rel="noopener"
-              target="_blank"
-            >
-              👾 GH
-            </a>
-            <a
-              href="https://twitter.com/adeolajs"
-              rel="noopener"
-              target="_blank"
-            >
-              🐦 TW
-            </a>
-            <a
-              href="https://www.linkedin.com/in/adeoladev"
-              rel="noopener"
-              target="_blank"
-            >
-              💼 LD
-            </a>
-            <a
-              href="https://www.instagram.com/adeolaadeoti_"
-              rel="noopener"
-              target="_blank"
-            >
-              📸 IN
-            </a>
-          </div>
-        </div>
+<div className="navigation-top__left">
+  <h4 className="navigation-h4">most you song, acc to diya</h4>
+  <a
+    href="https://open.spotify.com/track/19CSr8rwW05VJL2F91KFNK"
+    target="_blank"
+  >
+    guess. <br /> <h6>  i literally googled and clicked on the link. <br /> that's how
+    much i love you </h6>
+  </a>
+</div>
         <div className="navigation-top__right">
-          <h4 className="navigation-h4">HAVE AN IDEA?</h4>
+          <h4 className="navigation-h4">BEST OF: jiya</h4>
           <a
-            href="mailto:adeolaonigegeara@gmail.com"
+            href="https://www.instagram.com/billypopzine/"
             target="_blank"
-            rel="nofollow noopener noreferrer"
           >
-            Tell me about it
+           billypopzine
           </a>
         </div>
       </motion.div>
 
-      <motion.div
-        animate={
-          isOpen
-            ? { opacity: 1, transition: openBottomTransition }
-            : { opacity: 0, transition: closedTansition }
-        }
-        className="navigation-bottom"
-      >
-        <h4 className="navigation-h4">FEATURED PROJECTS</h4>
-        <div className="navigation-bottom__projects">
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://alexxandria.vercel.app/"
-            className="navigation-bottom__projects-card"
-          >
-            <img src="webp/alexxandria-nav.webp" alt="alexxandria" />
-            <h2>
-              Alexxandria
-              <br />
-              Forque
-            </h2>
-          </a>
-          <a
-            href="https://safarika-adeola.netlify.app/"
-            target="_blank"
-            rel="noopener"
-            className="navigation-bottom__projects-card"
-          >
-            <img src="webp/safarika-nav.webp" alt="safarika" />
-            <h2>Safarika</h2>
-          </a>
-          <a
-            href="https://adeolaadeoti.netlify.app/"
-            target="_blank"
-            rel="noopener"
-            className="navigation-bottom__projects-card"
-          >
-            <img src="webp/adeola-1.webp" alt="adeola" />
-            <h2>
-              AdeolaAdeoti
-              <br />
-              Version 1
-            </h2>
-          </a>
-        </div>
-      </motion.div>
     </motion.div>
   </motion.div>
 );
