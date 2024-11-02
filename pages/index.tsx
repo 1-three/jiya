@@ -158,24 +158,28 @@ const index: React.FC<indexProps> = () => {
           <header className="header">
             <div className="header__hero">
               <div className="header__hero--heading">
-                <span>you </span>
-                  <span className="header__hero--heading-gradient">
-                    <a href="https://www.instagram.com/p/C-Hu-mXvTP4/?img_index=7">               
-                         did{" "}
-                    </a>
-                </span>
-
-                <span>turn </span>
+                <h6><span>two </span>
                 <span className="header__hero--heading-gradient">
-                  twenty{" "}
+                  cures {" "}
                 </span>
-                <span>regardless.                  <br />
-                and it is going to look so </span>
+                 <span>for birthday melancholia:
+                  < br /> 
+                1. </span> 
                 <span className="header__hero--heading-gradient">
-                  happy{" "}
+                  phone {" "}
                 </span>
-                <span>on you</span>
-
+                <span> or </span>
+                <span className="header__hero--heading-gradient">
+                  write{" "}
+                </span>
+                <span>a letter</span>
+                <br />
+                <span>2. the easy way: </span>
+                <span className="header__hero--heading-gradient">
+                  repress{" "}
+                </span>
+                <span>till you feel better</span>
+                </h6>
               </div>
               <a
                 data-scroll-to
