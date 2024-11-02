@@ -60,6 +60,14 @@ export const MobileNavigation = ({ variants, isOpen }: any) => (
           >
            billypopzine
           </a>
+          <br />
+          <a
+            href="https://www.instagram.com/jiyazstudio/"
+            target="_blank"
+          >
+           jiyazstudio
+          </a>
+
         </div>
       </motion.div>
 
