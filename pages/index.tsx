@@ -252,7 +252,7 @@ const index: React.FC<indexProps> = () => {
           <h2 className="section-contact__h2">
             NOTE(S):
           <br /> 1. open on laptop ONLY
-            <br /> 2.  in case i cannot figure out how to make it work, i need you to know that the background music is supposed to be vienna.
+            <br /> 2.  in case i cannot figure out how to make it work, i need you to know that the background music is supposed to be vienna
             <br /> 3. ok toggle the on/off button on the left and it <i>should</i> work. cheers!
             </h2>
 
