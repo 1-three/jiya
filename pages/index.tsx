@@ -727,7 +727,7 @@ putting on my love tinted glasses 2 wish u a hbd jiya sorry I can’t come to yo
                 className="project-card__middle"
                 data-displacement="webp/myDistorsionImage.webp"
               >
-                <img src="svg/aditya.jpg" alt="GOOD MORNING JIYA NATION" />
+                <img src="svg/aditya.jpeg" alt="GOOD MORNING JIYA NATION" />
                 <img src="svg/switchscreen.jpg" alt="happy BIRTHDAY" />
               </div>
               <div className="project-card__right">
