@@ -228,7 +228,7 @@
     @for $i from 1 through 20 { // Adjust the range as needed
       &:nth-of-type(#{$i}) {
         a {
-          color: #6b9796; // Common style for all types
+          color: #e0e0e0; // Common style for all types
         }
         &::before {
           background-image: url("../../public/svg/0#{$i}.svg"); // Direct interpolation
