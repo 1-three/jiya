@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=VT323&display=swap');
+
 .header-wrapper {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
@@ -228,6 +230,7 @@
     @for $i from 1 through 20 { // Adjust the range as needed
       &:nth-of-type(#{$i}) {
         a {
+          font-family: "EB Garamond", serif;
           color: #e0e0e0; // Common style for all types
         }
         &::before {

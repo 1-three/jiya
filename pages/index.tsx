@@ -873,7 +873,7 @@ putting on my love tinted glasses 2 wish u a hbd jiya sorry I can’t come to yo
                   target="_blank"
                   className="project-card__link"
                 >
-                  this is the 5th time i've started writing this because I either do not know what to say or it gets away from me and turns into a chronicle of all the ways you've affected my life. which is a very long list. from your chess earrings to the anatomically correct heart ones, from your hair that reflects different colors at the roots and ends, from your love for purple that permeates the screen into even my life to your inclination to crash your car, you're sort of perfect. my favorite thing ever is making you laugh and it also happens to be the easiest because you're a five (x4) year old who laughs at everything. im not even really jealous of olivia because does she get to talk to you all day, every day !!!!!!! no. i do !!!!!! thank you for making everything better by just being, even when you reply "huh" to three messages in a row. i would say you have brought glorious technicolor to my life (you have) but this is starting to feel like a love rosie-esque wedding speech so im pulling the breaks here. i love you more than i can put into coherent words so all i will say is i hope i get to update this website every 7th of november for the rest of my life
+                  this is the 5th time i've started writing this because I either do not know what to say or it gets away from me and turns into a chronicle of all the ways you've affected my life. which is a very long list. from your chess earrings to the anatomically correct heart ones, from your hair that reflects different colors at the roots and ends, from your love for purple that permeates the screen into even <i>my</i> life to your inclination to crash your car, you're sort of perfect. my favorite thing ever is making you laugh and it also happens to be the easiest because you're a five (x4) year old who laughs at everything. im not even really jealous of olivia because does she get to talk to you all day, every day !!!!!!! no. i do !!!!!! thank you for making everything better by just <i>being</i>, even when you reply "huh" to three messages in a row. i would say you have brought glorious technicolor to my life (you have) but this is starting to feel like a love rosie-esque wedding speech so im pulling the breaks here. i love you more than i can put into coherent words so all i will say is i hope i get to update this website every 7th of november for the rest of my life
                 </a>
               </div>
             </div>
@@ -881,7 +881,7 @@ putting on my love tinted glasses 2 wish u a hbd jiya sorry I can’t come to yo
           </section>
           <section className="section-contact">
             <h1 className="heading-1">
-              <span>THE END !!!!!!! </span>
+              <span>THE END !!!!!!! HAPPY 20TH BIRTHDAY</span>
             </h1>
           </section>
         </main>
