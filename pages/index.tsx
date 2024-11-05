@@ -276,7 +276,7 @@ const index: React.FC<indexProps> = () => {
                   className="heading-2"
                 >
                   FROM:
-                  <br /> mamma
+                  <br /> mummy
                 </h2>
                 <a
                   rel="noopener"
