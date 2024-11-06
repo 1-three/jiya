@@ -516,16 +516,21 @@ dear jiya didi, you are one of the wisest and most pulchritudinous people i know
                   className="heading-2"
                 >
                   FROM:
-                  <br /> devshree
+                  <br /> devshree & john
                 </h2>
                 <a
                   rel="noopener"
                   target="_blank"
                   className="project-card__link"
                 >
-happiest birthday jiyaaaa! 🥳🌟
+D: happiest birthday jiyaaaa! 🥳🌟
 <br /> I’m so grateful to diya for introducing me to you! 
-<br /> such a cutuu you are! sending loads of love😙💗                 </a>
+<br /> such a cutuu you are! sending loads of love😙💗    
+< br />  
+<br /> J:                   Happy Birthday Jiya!!!!!🥳 
+                  <br /> Enjoy your day with your family and friends❤️ 
+                  <br /> May God bless you🫰🏼                
+           </a>
               </div>
             </div>
 
@@ -585,16 +590,21 @@ Jiya jaae na jaae na jaae na ore piya re!! ❤️
                   className="heading-2"
                 >
                   FROM:
-                  <br /> john
+                  <br /> armaan
                 </h2>
                 <a
                   rel="noopener"
                   target="_blank"
                   className="project-card__link"
                 >
-                  Happy Birthday Jiya!!!!!🥳 
-                  <br /> Enjoy your day with your family and friends❤️ 
-                  <br /> May God bless you🫰🏼                </a>
+Hiiiii Jiya!!! 🍄 
+<br /> (I've been told to say that—jus' kidding) 
+<br /> I know you very little (ironic given that momo 
+<br /> just won't shut up about you) but here's wishing 
+<br /> you the HAPPIEST BIRTHDAY 🪻 Have a smacking day!!
+<br /> (I'd love to chat sometime but I really don't 
+<br />appreciate having my typos pointed out and pinned 🙈)
+                  </a>
               </div>
             </div>
 
