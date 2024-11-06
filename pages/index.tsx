@@ -484,15 +484,15 @@ thank you for introducing me to taylor swift i will forever thank you for that. 
                   className="heading-2"
                 >
                   FROM:
-                  <br /> your fav cousin
-                  <br /> (seerat)
+                  <br /> seerat
                 </h2>
                 <a
                   rel="noopener"
                   target="_blank"
                   className="project-card__link"
                 >
-dear jiya didi, you are one of the wisest and most pulchritudinous people i know. you always have a solution to my first world problems and inspire me to be a better person everyday. talking to you is like a breath of fresh air after dealing with all kinds of frustrations throughout the week. i hope 20 treats you well and success follows you everywhere you go. i also hope you do something crazy this year like finally get a bf but honestly even watching a horror movie will be a big accomplishment ;)                </a>
+dear jiya didi, you are one of the wisest and most pulchritudinous people i know. you always have a solution to my first world problems and inspire me to be a better person everyday. talking to you is like a breath of fresh air after dealing with all kinds of frustrations throughout the week. i hope 20 treats you well and success follows you everywhere you go. i also hope you do something crazy this year like finally get a bf but honestly even watching a horror movie will be a big accomplishment ;)
+<br /> -your fav cousin         </a>
               </div>
             </div>
 
